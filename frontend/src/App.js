@@ -8,6 +8,12 @@ import CreatePost from './pages/CreatePost/CreatePost';
 import EditPost from './pages/EditPost/EditPost';
 import Layout from './components/Layout/Layout';
 
+// 🔐 Protected Route
+function ProtectedRoute({ children }) {
+  const isAuthenticated = !!localStorage.getItem('token');
+  return isAuthenticated ? children : <LoginPage />;
+}
+
 function App() {
   return (
     <Router>
@@ -21,11 +27,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
-
-function ProtectedRoute({ children }) {
-  const isAuthenticated = !!localStorage.getItem('token');
-  return isAuthenticated ? children : <LoginPage />;
 }
 
 export default App;

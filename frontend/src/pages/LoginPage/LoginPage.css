@@ -1,0 +1,61 @@
+/* src/pages/LoginPage.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+  background: linear-gradient(to right, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.login-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 1.5rem;
+  }
+
+  .login-input,
+  .login-button {
+    font-size: 0.9rem;
+  }
+}
